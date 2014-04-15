@@ -1,18 +1,3 @@
-/*******************************************************************************
- * Copyright 2011-2013 Sergey Tarasevich
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *******************************************************************************/
 package com.nostra13.universalimageloader.core;
 
 import android.content.res.Resources;
@@ -29,6 +14,7 @@ import com.nostra13.universalimageloader.core.process.BitmapProcessor;
 
 /**
  * Contains options for image display. Defines:
+ * 图片显示方式
  * <ul>
  * <li>whether stub image will be displayed in {@link com.nostra13.universalimageloader.core.imageaware.ImageAware
  * image aware view} during image loading</li>
@@ -63,16 +49,25 @@ import com.nostra13.universalimageloader.core.process.BitmapProcessor;
  * @since 1.0.0
  */
 public final class DisplayImageOptions {
-
+	/**当图片正在获取时显示的图片资源*/
 	private final int imageResOnLoading;
+	/**当URI为空时显示的图片资源*/
 	private final int imageResForEmptyUri;
+	/**当图片获取失败时显示的图片资源*/
 	private final int imageResOnFail;
+	/**图片正在获取时显示的 Drawable */
 	private final Drawable imageOnLoading;
+	/**URI为空时显示的 Drawable */
 	private final Drawable imageForEmptyUri;
+	/**当图片获取失败时显示的 Drawable */
 	private final Drawable imageOnFail;
+	/**当图片获取之前是否显示默认图片 */
 	private final boolean resetViewBeforeLoading;
+	/** 是否将获取到的图片缓存到内存中 */
 	private final boolean cacheInMemory;
+	/** 是否将获取到的图片缓存到磁盘中 */
 	private final boolean cacheOnDisc;
+	/**  图片缩放模式 */
 	private final ImageScaleType imageScaleType;
 	private final Options decodingOptions;
 	private final int delayBeforeLoading;

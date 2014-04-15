@@ -690,7 +690,7 @@ public final class ImageLoaderConfiguration
 			{
 				memoryCache = new FuzzyKeyMemoryCache<String, Bitmap>(memoryCache, MemoryCacheUtils.createFuzzyKeyComparator());
 			}
-			if (mDownloader == null)
+			if (mDownloader == null) 
 			{
 				mDownloader = DefaultConfigurationFactory.createImageDownloader(context);
 			}
